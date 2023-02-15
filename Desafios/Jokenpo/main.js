@@ -1,32 +1,35 @@
-//  body onload="gerando(0, 3)"
-function gerando(min, max) {
-    let possibilidades = max - min;
-    let num1 = Math.random() * possibilidades;
-    alert(num1);
+let addEscolha = parseInt(prompt("1 - Papel / 2 - Pedra / 3 - Tesoura"));
 
-    if(form1.jogadas.value == 1) {
-        if (num1 > 2) {
+function gerarAleatorio(min, max) {
+    let possibilidades = max - min;
+    let numeroSortido = parseInt(Math.random() * possibilidades);
+    alert(numeroSortido);
+
+    if(addEscolha === 1) {
+        if (numeroSortido === 2) {
             alert("Voce escolheu papel e ganhou da pedra");
-        }else if (num1 > 1){
+        }else if (numeroSortido === 3){
             alert("Voce escolheu papel e perdeu para tesoura");
-        }else {
+        }else if(numeroSortido === 1) {
             alert("Voce escolheu papel e empatou com papel");
         }
-    }else if(form1.jogadas.value == 2) {
-        if (num1 > 2) {
+    }else if(addEscolha === 2) {
+        if (numeroSortido === 3) {
             alert("Voce escolheu pedra e ganhou da tesoura");
-        }else if (num1 > 1){
+        }else if (numeroSortido === 1){
             alert("Voce escolheu pedra e perdeu para papel");
-        }else {
+        }else if(numeroSortido === 2) {
             alert("Voce escolheu pedra e empatou com pedra");
         }
-    }else if (form1.jogadas.value == 3) {
-        if (num1 > 2) {
+    }else if (addEscolha === 3) {
+        if (numeroSortido === 1) {
             alert("Voce escolheu tesoura e ganhou da papel");
-        }else if (num1 > 1){
+        }else if (numeroSortido === 2){
             alert("Voce escolheu tesoura e perdeu para pedra");
-        }else {
+        }else if (numeroSortido === 3) {
             alert("Voce escolheu tesoura e empatou com tesoura");
         }
     }
 }
+
+gerarAleatorio(1, 3);
