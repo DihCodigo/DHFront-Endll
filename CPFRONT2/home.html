@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKPOINT FRONT ENDII</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="caixa">
+        <h2 class="titulo-h2">
+            Inserir Card
+        </h2>
+        <form id="frmCard">
+            <label for="">URL Imagem</label>
+            <input type="text" id="txtUrl" name="urlName" class="caixa-texto">
+            <label for="">Titulo</label>
+            <input type="text" id="txtTitulo" name="tituloName" class="caixa-texto">
+            <label for="">Sobre</label>
+            <input type="text" id="txtDesc" name="descName" class="caixa-texto">
+
+            <div id="btn">
+                <button id="btnCriar" class="btn">Criar</button>
+                <button id="btnCriar" class="btn">Limpar</button>
+            </div>
+        </form>
+    </div>
+
+    <section>
+        <div class="caixa">
+            <h2 class="titulo-h2">Listar Cards</h2>
+
+            <div id="cards">
+                <div id="card"></div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+
+<script src="./js/scripts.js" defer></script>
+
+</html>

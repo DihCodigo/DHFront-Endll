@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <input type="text" id="ftitulo">
+    <input type="text" id="ftexto">
+    <button id="btnAdd">Adicionar</button>
+
+    <div id="cardsElementos">
+        
+    </div>
+    
+</body>
+</html>
+
+<style>
+    #cardsElementos {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+}
+</style>
+
+<script>
+
+    function inicia() {
+        document.getElementById("btnAdd").addEventListener("click",function(){
+
+            let cards = document.getElementById("cardsElementos");
+            let title = document.getElementById("ftitulo");
+            let texto = document.getElementById("ftexto");
+
+
+            let h2 = document.createElement("h2");
+            h2.textContent = title.value;
+            cards.appendChild(h2);
+            title.value = "";
+            title.focus();
+            
+            let img = document.createElement("img");
+            img.src = texto.value;
+            cards.appendChild(img);
+            texto.value = "";
+            texto.focus();
+        });
+    }
+
+    window.addEventListener("load", inicia);
+</script>
